@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="text-black">
-        asdsadasdasdasdaas
-    </div>
+    <h1 class="text-3xl font-bold underline">
+        Hello world!sdadas
+    </h1>
 @endsection
