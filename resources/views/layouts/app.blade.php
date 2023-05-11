@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="UTF-8">
@@ -7,9 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HISBEANS</title>
 
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+
     <!-- TAILWIND CSS-->
-    <link href="/dist/output.css" rel="stylesheet">
-    <link href="/resources/css/app.css" rel="stylesheet" />
+
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.17/dist/css/uikit.min.css" />
 
@@ -24,9 +32,9 @@
 </head>
 
 <body>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!sdadasdd
-    </h1>
+
+    @yield('content')
+
 </body>
 
 </html>

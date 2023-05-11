@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('modules.index');
+Route::get('/login', function () {
+    return view('auth.login');
 });
+
+//Route::post('/', [LoginController::class, 'login'])->name('login');
